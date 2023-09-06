@@ -1,0 +1,13 @@
+---
+# tasks file for nginx
+
+- name: Instalando Nginx...
+  apt:
+   name:
+     - nginx
+
+- name: Copiando site.html...
+  template: src=site.html dest=/var/www/html
+
+- name: Iniciando Nginx... 
+  systemd: name=nginx state=restarted

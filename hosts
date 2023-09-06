@@ -1,0 +1,2 @@
+[VMs]
+debian ansible_host=192.168.176.129 ansible_user=guilherme ansible_password=senha123 ansible_become_password=senha123

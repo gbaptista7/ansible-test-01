@@ -1,0 +1,22 @@
+---
+# tasks file for desafio
+- name: Instalando pacotes...
+  apt:
+    name:
+      - vim
+      - curl
+      - telnet
+      - unzip
+      - wget
+      - net-tools
+      - htop
+      - nmap
+
+- name: Definindo nome da maquina...
+  ansible.builtin.hostname:
+    name: debian-gui
+
+- name: Criando um usuario
+  ansible.builtin.user:
+    name: gbaptista7
+    group: admin
